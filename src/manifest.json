@@ -1,0 +1,11 @@
+{
+  "browser_action": {
+    "default_popup": "./popup.html"
+  },
+  "description": "Color of the Day",
+  "manifest_version": 2,
+  "name": "color-of-the-day",
+  "permissions": [],
+  "version": "1.0.0",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

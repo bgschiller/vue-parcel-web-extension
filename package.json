@@ -1,0 +1,26 @@
+{
+  "name": "vue-parcel-web-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run pack && npm run remove-evals && npm run zip",
+    "dev": "parcel watch src/manifest.json --out-dir dist --no-hmr",
+    "pack": "parcel build src/manifest.json --out-dir dist",
+    "remove-evals": "node scripts/remove-evals.js",
+    "zip": "node scripts/build-zip.js"
+  },
+  "author": "Brian Schiller",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^5.0.2",
+    "vue": "^2.6.12",
+    "webextension-polyfill": "^0.7.0"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
+    "parcel": "^1.12.4",
+    "parcel-plugin-web-extension": "^1.6.1",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
